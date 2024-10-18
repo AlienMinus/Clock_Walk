@@ -1,0 +1,364 @@
+body {
+  background-color: #101010;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  font-family: cursive;
+  font-weight: bolder;
+  font-size: 48px;
+  background: linear-gradient(180deg, #0cf480, #03e3f7);
+  -webkit-background-clip: text;
+  background-clip: none;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px; 
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.time-date-section {
+  color: aliceblue;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.body {
+  background-color: #101010;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  width: 330px;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock {
+  position: relative;
+  width: 330px;
+  height: 320px;
+  border: 8px solid #333;
+  border-radius: 100%; /* Ensures the clock is a perfect circle */
+  background: #3c3c3c;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  display: grid;
+  place-items: center;
+}
+
+.clock::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #ffffff;
+  border-radius: 100%;
+  z-index: 3;
+}
+
+.hand {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  transform-origin: bottom center;
+}
+
+.hand i {
+  position: absolute;
+  background-color: var(--clr);
+  width: 4px;
+  height: var(--h);
+  border-radius: 8px;
+  z-index: 2;
+}
+
+/* Grid for clock numbers */
+.clock span {
+  position: absolute;
+  font-size: 1.2rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+span:nth-child(4) {
+  /* 1 */
+  transform: rotate(30deg) translate(0, -140px);
+}
+
+span:nth-child(5) {
+  /* 2 */
+  transform: rotate(60deg) translate(0, -140px);
+}
+
+span:nth-child(6) {
+  /* 3 */
+  transform: rotate(90deg) translate(0, -140px);
+}
+
+span:nth-child(7) {
+  /* 4 */
+  transform: rotate(120deg) translate(0, -140px);
+}
+
+span:nth-child(8) {
+  /* 5 */
+  transform: rotate(150deg) translate(0, -140px);
+}
+
+span:nth-child(9) {
+  /* 6 */
+  transform: rotate(180deg) translate(0, -140px);
+}
+
+span:nth-child(10) {
+  /* 7 */
+  transform: rotate(210deg) translate(0, -140px);
+}
+
+span:nth-child(11) {
+  /* 8 */
+  transform: rotate(240deg) translate(0, -140px);
+}
+
+span:nth-child(12) {
+  /* 9 */
+  transform: rotate(270deg) translate(0, -140px);
+}
+
+span:nth-child(13) {
+  /* 10 */
+  transform: rotate(300deg) translate(0, -140px);
+}
+
+span:nth-child(14) {
+  /* 11 */
+  transform: rotate(330deg) translate(0, -140px);
+}
+
+span:nth-child(15) {
+  /* 12 */
+  transform: rotate(360deg) translate(0, -140px);
+}
+.rating-buttons {
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+#like-button,
+#dislike-button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #2200fe;
+  color: #fff;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 5px rgb(255, 255, 255);
+}
+
+#like-button:hover,
+#dislike-button:hover {
+  background-color: #130474;
+  box-shadow: 0 4px 8px rgb(253, 252, 252);
+}
+
+@media (max-width: 768px) {
+  .content-rating {
+    flex-direction: column;
+    padding: 10px;
+  }
+}
+
+.share {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.share_button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: aquamarine;
+  color: #026280;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 5px rgb(255, 255, 255);
+}
+.share_button:hover .stars {
+  display: block;
+  filter: drop-shadow(0 0 10px) #fffdef;
+}
+:root {
+  --color: #95f9fe;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+button {
+  position: relative;
+  padding: 12px 35px;
+  background: var(--color);
+  font-size: 17px;
+  font-weight: 500;
+  color: #181818;
+  border: 3px solid var(--color);
+  border-radius: 8px;
+  box-shadow: 0 0 0 #fec1958c;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.star-1 {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 25px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.star-2 {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-3 {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-4 {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  width: 8px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-5 {
+  position: absolute;
+  top: 25%;
+  left: 45%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 0.6s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-6 {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 0.8s ease;
+}
+
+button:hover {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background: transparent;
+  color: var(--color);
+  box-shadow: 0 0 25px #fec1958c;
+}
+
+button:hover .star-1 {
+  position: absolute;
+  top: -80%;
+  left: -30%;
+  width: 25px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-2 {
+  position: absolute;
+  top: -25%;
+  left: 10%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-3 {
+  position: absolute;
+  top: 55%;
+  left: 25%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-4 {
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  width: 8px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-5 {
+  position: absolute;
+  top: 25%;
+  left: 115%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-6 {
+  position: absolute;
+  top: 5%;
+  left: 60%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+.fil0 {
+  fill: #fffdef;
+}

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Clock_Walk</title>
+  </head>
+  <body>
+    <h1>Clock_Walk</h1>
+    <section class="body">
+      <div class="container">
+        <div class="clock">
+          <div style="--clr: #ff3d58; --h: 74px" id="hour" class="hand">
+            <i></i>
+          </div>
+          <div style="--clr: #00a6ff; --h: 84px" id="min" class="hand">
+            <i></i>
+          </div>
+          <div style="--clr: #ffffff; --h: 94px" id="sec" class="hand">
+            <i></i>
+          </div>
+
+          <span style="--i: 1"><b>1</b></span>
+          <span style="--i: 2"><b>2</b></span>
+          <span style="--i: 3"><b>3</b></span>
+          <span style="--i: 4"><b>4</b></span>
+          <span style="--i: 5"><b>5</b></span>
+          <span style="--i: 6"><b>6</b></span>
+          <span style="--i: 7"><b>7</b></span>
+          <span style="--i: 8"><b>8</b></span>
+          <span style="--i: 9"><b>9</b></span>
+          <span style="--i: 10"><b>10</b></span>
+          <span style="--i: 11"><b>11</b></span>
+          <span style="--i: 12"><b>12</b></span>
+        </div>
+      </div>
+    </section>
+    <br />
+    <section class="time-date-section">
+      <h2 id="currentDateTime"></h2>
+    </section>
+
+    <div class="rating-buttons">
+      <button id="like-button" onClick="likeCount()">
+        Like(<span id="like" type="number">0</span>)
+      </button>
+      <button id="dislike-button" onClick="dislikeCount()">
+        Dislike(<span id="dislike" type="number">0</span>)
+      </button>
+    </div>
+    <br />
+    <p class="time-date-section">
+      Total Ratings: <span id="total_ratings">0</span>
+    </p>
+    <br />
+    <div class="share">
+      <button class="share_button">
+        Hover It To See Magic
+        <div class="star-1">
+          <svg
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 784.11 815.53"
+            style="
+              shape-rendering: geometricPrecision;
+              text-rendering: geometricPrecision;
+              image-rendering: optimizeQuality;
+              fill-rule: evenodd;
+              clip-rule: evenodd;
+            "
+            version="1.1"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs></defs>
+            <g id="Layer_x0020_1">
+              <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+              <path
+                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                class="fil0"
+              ></path>
+            </g>
+          </svg>
+        </div>
+        <div class="star-2">
+          <svg
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 784.11 815.53"
+            style="
+              shape-rendering: geometricPrecision;
+              text-rendering: geometricPrecision;
+              image-rendering: optimizeQuality;
+              fill-rule: evenodd;
+              clip-rule: evenodd;
+            "
+            version="1.1"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs></defs>
+            <g id="Layer_x0020_1">
+              <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+              <path
+                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                class="fil0"
+              ></path>
+            </g>
+          </svg>
+        </div>
+        <div class="star-3">
+          <svg
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 784.11 815.53"
+            style="
+              shape-rendering: geometricPrecision;
+              text-rendering: geometricPrecision;
+              image-rendering: optimizeQuality;
+              fill-rule: evenodd;
+              clip-rule: evenodd;
+            "
+            version="1.1"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs></defs>
+            <g id="Layer_x0020_1">
+              <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+              <path
+                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                class="fil0"
+              ></path>
+            </g>
+          </svg>
+        </div>
+        <div class="star-4">
+          <svg
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 784.11 815.53"
+            style="
+              shape-rendering: geometricPrecision;
+              text-rendering: geometricPrecision;
+              image-rendering: optimizeQuality;
+              fill-rule: evenodd;
+              clip-rule: evenodd;
+            "
+            version="1.1"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs></defs>
+            <g id="Layer_x0020_1">
+              <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+              <path
+                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                class="fil0"
+              ></path>
+            </g>
+          </svg>
+        </div>
+        <div class="star-5">
+          <svg
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 784.11 815.53"
+            style="
+              shape-rendering: geometricPrecision;
+              text-rendering: geometricPrecision;
+              image-rendering: optimizeQuality;
+              fill-rule: evenodd;
+              clip-rule: evenodd;
+            "
+            version="1.1"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs></defs>
+            <g id="Layer_x0020_1">
+              <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+              <path
+                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                class="fil0"
+              ></path>
+            </g>
+          </svg>
+        </div>
+        <div class="star-6">
+          <svg
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 784.11 815.53"
+            style="
+              shape-rendering: geometricPrecision;
+              text-rendering: geometricPrecision;
+              image-rendering: optimizeQuality;
+              fill-rule: evenodd;
+              clip-rule: evenodd;
+            "
+            version="1.1"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs></defs>
+            <g id="Layer_x0020_1">
+              <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+              <path
+                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                class="fil0"
+              ></path>
+            </g>
+          </svg>
+        </div>
+      </button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
